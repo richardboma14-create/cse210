@@ -1,9 +1,25 @@
-using System;
+List<int> numbers = new List<int>();
 
-class Program
+Console.WriteLine("Enter a list of numbers, type 0 when finished.");
+
+int number = -1;
+
+while (number != 0)
 {
-    static void Main(string[] args)
+    Console.Write("Enter number: ");
+    number = int.Parse(Console.ReadLine());
+
+    if (number != 0)
     {
-        Console.WriteLine("Hello World! This is the Exercise4 Project.");
+        numbers.Add(number);
     }
 }
+
+Console.WriteLine("You entered:");
+
+foreach (int item in numbers)
+{
+    Console.WriteLine(item);
+}
+
+
